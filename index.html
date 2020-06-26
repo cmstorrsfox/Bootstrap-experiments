@@ -15,8 +15,8 @@
                     <h1 class="display-2 text-white py-3">Learning How to Bootstrap</h1>
                 </div>
                 <!--Start of navbar-->
-                <div class="row-12 w-100%">
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light w-100% mx-lg-n5">
+                <div class="row-12 w-100% sticky-top">
+                    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light w-100% mx-lg-n5">
                         <a class="navbar-brand" href="#">
                             <img src="https://www.clker.com/cliparts/b/l/0/w/q/3/modified-generic-company-logo.svg.hi.png" alt="company logo" width=100 height=auto>
                         </a>
@@ -32,17 +32,14 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#feels">Cards</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#display">Displays</a>
-                            </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  More
+                                  Displays
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                  <a class="dropdown-item" href="#">Blog</a>
-                                  <a class="dropdown-item" href="#">News</a>
-                                  <a class="dropdown-item" href="#">Archive</a>
+                                  <a class="dropdown-item" href="#carousel">Carousel</a>
+                                  <a class="dropdown-item" href="#collapse">Collapse</a>
+                                  <a class="dropdown-item" href="#jumbotron">Jumbotron</a>
                                 </div>
                               </li>
                         </ul>
@@ -101,8 +98,8 @@
                 <div class="row">
                     <div class="col mx-lg-n5 bg-light rounded-top rounded-bottom">
                         <div class="row justify-content-center" id="display"><!--start of display row - headers-->
-                            <h1 class="display-3 mt-5 text-center">The many ways of display with Bootstrap</h1>
-                            <h5 class="display-4 text-center bg-warning p-3 mt-3 rounded-pill">Carousel</h5>
+                            <h1 class="display-3 mt-5 text-center">The many ways of display with Bootstrap<span class="badge badge-primary ml-3">New!</span></h1>
+                            <h5 class="display-4 text-center bg-warning p-3 mt-3 rounded-pill" id="carousel">Carousel</h5>
                         </div>
                         <div class="row justify-content-center py-3"><!--start of carousel row-->
                             <div id="gifCarousel" class="carousel slide w-75" data-keyboard="true"> <!--start of carousel-->
@@ -137,7 +134,35 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> <!--end of carousel and headers-->
+                <div class="row" id="collapse">
+                    <div class="col mx-lg-n5 bg-light rounded-top rounded-bottom text-center">
+                        <div class="row justify-content-center">
+                            <h5 class="display-4 text-center bg-warning p-3 mt-5 rounded-pill">Collapse</h5>
+                        </div>
+                        <p>
+                            <button class="btn btn-primary btn-lg mt-2" type="button" data-toggle="collapse" data-target="#happyDiv" aria-expanded="false" aria-controls="happyDiv">
+                                Bring the happy!
+                            </button>
+                        </p>
+                        <div class="collapse" id="happyDiv">
+                        <img src="https://media.giphy.com/media/3o6gDUuDk7jmezFcru/giphy.gif">
+                        </div>
+                    </div>
+                </div> <!--end of collapse-->
+                <div class="row">
+                    <div class="col mx-lg-n5 bg-light rounded-top rounded-bottom text-center">
+                        <div class="row justify-content-center">
+                            <h5 class="display-4 text-center bg-warning p-3 mt-5 rounded-pill" id="collapse">Jumbotron</h5>
+                        </div>
+                    <div class="jumbotron" style="background-image: url(https://images.newindianexpress.com/uploads/user/imagelibrary/2019/3/7/w900X450/Take_in_the_Scenery.jpg); background-size: cover; height: 100%;">
+                            <div class="container">
+                              <h1 class="display-4 text-dark bg-light mb-0 rounded-top" id="jumbotron">Jumbotron</h1>
+                              <p class="lead text-dark bg-light rounded-bottom">This is a hero style jumbotron.</p>
+                            </div>
+                          </div>
+                    </div>
+                </div> <!--end of jumbotron-->
             </div> <!--end of container-->
 
 
